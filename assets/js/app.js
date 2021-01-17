@@ -39,11 +39,6 @@ d3.csv('assets/data/healthData.csv').then(function(healthData, err) {
   var bottomAxis= d3.axisBottom(xLinearScale)
   var leftAxis= d3.axisLeft(yLinearScale);
 
-  // var xAxis= chartGroup.append('g')
-  //   .classed('x-axis', true)
-  //   .attr('transform', `translate(0, ${height})`)
-  //   .call(bottomAxis);
-
   //Add axis
   chartGroup.append("g")
     .attr("transform", `translate(0, ${height})`)
@@ -122,8 +117,3 @@ d3.csv('assets/data/healthData.csv').then(function(healthData, err) {
       .text("Yearly Income (%)");
     
 });
-
-
-  // var labelsGroup = chartGroup.append("g")
-  //   .attr("transform", `translate(${width / 2}, ${height + 20})`);
-  //   console.log(labelsGroup);
