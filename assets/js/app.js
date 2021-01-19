@@ -82,10 +82,10 @@ d3.csv('assets/data/healthData.csv').then(function(healthData, err) {
   .attr("class", "tooltip")
   .offset([80, -60])
   .style('position', 'absolute')
-  .style('background', 'olive')
+  .style('background', 'darkseagreen')
   .style('pointer-events', 'none')
   .html(function(data) {
-    return (`<br>Population Who Smokes: ${data.smokes} % <br>Yearly Income ($): ${data.income} `)
+    return (`<br><b>Age of Smokers:</b> ${data.smokes}%<br><b>Yearly Income ($):</b> ${data.income} `)
   });
 
     // tooltip in the chart
@@ -109,7 +109,7 @@ d3.csv('assets/data/healthData.csv').then(function(healthData, err) {
       .attr("x", 0 - (height / 1.30))
       .attr("dy", "1em")
       .attr("class", "axisText")
-      .text("Population Who Smokes (%)");
+      .text("Age of Smokers");
 
   chartGroup.append("text")
       .attr("transform", `translate(${width / 2.5}, ${height + margin.top + 30})`)
